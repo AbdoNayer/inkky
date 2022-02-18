@@ -1,0 +1,248 @@
+// Font Import Cdn
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;500;800&display=swap');
+
+// Local Style Page
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: 'Cairo', sans-serif;
+  }
+  
+  a, button, input, textarea, i{
+    @include transition;
+  }
+  
+  img{
+    object-fit: cover;
+  }
+  
+  a{
+    text-decoration: none !important;
+    cursor: pointer;
+  }
+  
+  i{
+    vertical-align: middle;
+    &:hover, &:focus{
+      color: $main-color
+    }
+  }
+  
+  h1,h2,h3,h4,h5,h6,p{
+    margin: 10px 0;
+  }
+  
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  // Style Scroll Site
+  
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: $main-color;
+    border: 1px solid $main-color
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: $main-color;
+  }
+  
+  // Style Button Site
+  
+  button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .btn-button{
+    border-radius: 3px;
+    height: 40px;
+    line-height: 40px;
+    width: 150px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .btn-default{
+    background: $main-color !important;
+    color: $white !important;
+    border: 1px solid $main-color !important;
+  }
+  
+  .btn-white{
+    background: $white !important;
+    color: $main-color !important;
+    border: 1px solid $white !important;
+  }
+  
+  .btn-border-main{
+    color: $main-color !important;
+    border: 1px solid $main-color !important;
+  }
+  
+  // Classes Colors
+  
+  .color-default{
+    color: $main-color !important;
+  }
+  
+  .bg-default{
+    background-color: $main-color !important;
+  }
+  
+  .color-black{
+    color: $black !important;
+  }
+  
+  .color-white{
+    color: $white !important;
+  }
+  
+  // selection
+  
+  ::selection {
+    background: $main-color;
+    color: $white;
+  }
+  
+  ::-moz-selection {
+    background: $main-color;
+    color: $white;
+  }
+  
+  // Style Form Validation
+  
+  input{
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid $black;
+    color: $black;
+    background-color: transparent;
+    height: 45px;
+    font-size: 14px;
+    transition: 0.5s;
+  }
+  
+  textarea{
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1px solid $black;
+    color: $black;
+    background-color: transparent;
+    font-size: 14px;
+    resize: none;
+    min-height: 210px;
+  }
+  
+  ::-webkit-input-placeholder,
+  ::-moz-placeholder,
+  :-ms-input-placeholder,
+  :-moz-placeholder{
+    color: $main-color;
+    opacity: 1;
+  }
+  
+  input:focus::-webkit-input-placeholder,
+  textarea:focus::-webkit-input-placeholder{
+    opacity: 0;
+    transition: 0.3s;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: $main-color !important;
+  }
+
+  //  Slider Owl
+
+.owl-carousel{
+  display: block;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  direction: ltr;
+    .owl-nav{
+     display: none;
+    }
+}
+
+// Loading Page
+
+.loader{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  z-index: 99999;
+  .loading{
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotate 3s linear infinite;
+    span{
+      width: 32px;
+      height: 32px;
+      background-color: $main-color;
+      margin: 4px;
+      animation: scale 1.5s linear infinite;
+      &:nth-child(1){
+        border-radius: 50% 50% 0 50%;
+        background-color: $main-color;
+        transform-origin: bottom right;
+      }
+      &:nth-child(2){
+        border-radius: 50% 50% 50% 0;
+        background-color: $item-color;
+        transform-origin: bottom left;
+        animation-delay: .5s;
+      }
+      &:nth-child(3){
+        border-radius: 50% 0 50% 50%;
+        background-color: $color-check;
+        transform-origin: top right;
+        animation-delay: 1.5s;
+      }
+      &:nth-child(4){
+        border-radius: 0 50% 50% 50%;
+        background-color: $black;
+        transform-origin: top left;
+        animation-delay: 1s;
+      }
+    }
+  }
+}
+
+@keyframes rotate{
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scale{
+  50%{
+    transform: scale(1.3);
+  }
+}
