@@ -129,6 +129,11 @@
             @include absoluteItem(50%, 0, 0, -50%);
         }
         .shape-anime{
+            img{
+                @include absoluteItem(50%, 0, 0, -50%);
+                max-width: 500px;
+                z-index: 99;
+            }
             .shape {
                 background: linear-gradient(45deg, var(--white) 0%, var(--white) 100%);
                 animation: morph 4s ease-in-out infinite;

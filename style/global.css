@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@500;700&display=swap");
 :root {
   --mainColor: #0E77FF;
   --shapeColor: #68BAE5;
@@ -22,7 +22,7 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  font-family: 'Cairo', sans-serif;
+  font-family: 'El Messiri', sans-serif;
 }
 
 a, button, input, textarea, i {
@@ -475,6 +475,18 @@ input:focus, textarea:focus {
   left: 0;
   right: 0;
   margin: auto;
+}
+
+.section-head .content-view .shape-anime img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 500px;
+  z-index: 99;
 }
 
 .section-head .content-view .shape-anime .shape {
