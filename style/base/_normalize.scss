@@ -10,13 +10,13 @@
     padding: 0;
     outline: none !important;
     box-sizing: border-box;
-  }
+}
   
-  body {
+body {
     overflow-x: hidden;
     overflow-y: hidden;
     font-family: 'Cairo', sans-serif;
-  }
+}
   
   a, button, input, textarea, i{
     @include transition;
@@ -29,12 +29,13 @@
   a{
     text-decoration: none !important;
     cursor: pointer;
+    display: inline-block;
   }
   
   i{
     vertical-align: middle;
     &:hover, &:focus{
-      color: $main-color
+      color: var(--mainColor)
     }
   }
   
@@ -56,12 +57,12 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: $main-color;
-    border: 1px solid $main-color
+    background: var(--mainColor);
+    border: 1px solid var(--mainColor)
   }
   
   ::-webkit-scrollbar-thumb {
-    background: $main-color;
+    background: var(--mainColor);
   }
   
   // Style Button Site
@@ -83,50 +84,50 @@
   }
   
   .btn-default{
-    background: $main-color !important;
-    color: $white !important;
-    border: 1px solid $main-color !important;
+    background: var(--mainColor) !important;
+    color: var(--white) !important;
+    border: 1px solid var(--mainColor) !important;
   }
   
   .btn-white{
-    background: $white !important;
-    color: $main-color !important;
-    border: 1px solid $white !important;
+    background: var(--white) !important;
+    color: var(--mainColor) !important;
+    border: 1px solid var(--white) !important;
   }
   
   .btn-border-main{
-    color: $main-color !important;
-    border: 1px solid $main-color !important;
+    color: var(--mainColor) !important;
+    border: 1px solid var(--mainColor) !important;
   }
   
   // Classes Colors
   
   .color-default{
-    color: $main-color !important;
+    color: var(--mainColor) !important;
   }
   
   .bg-default{
-    background-color: $main-color !important;
+    background-color: var(--mainColor) !important;
   }
   
   .color-black{
-    color: $black !important;
+    color: var(--black) !important;
   }
   
   .color-white{
-    color: $white !important;
+    color: var(--white) !important;
   }
   
   // selection
   
   ::selection {
-    background: $main-color;
-    color: $white;
+    background: var(--mainColor);
+    color: var(--white);
   }
   
   ::-moz-selection {
-    background: $main-color;
-    color: $white;
+    background: var(--mainColor);
+    color: var(--white);
   }
   
   // Style Form Validation
@@ -134,8 +135,8 @@
   input{
     width: 100%;
     padding: 10px 20px;
-    border-bottom: 1px solid $black;
-    color: $black;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
     background-color: transparent;
     height: 45px;
     font-size: 14px;
@@ -145,8 +146,8 @@
   textarea{
     width: 100%;
     padding: 10px 20px;
-    border-bottom: 1px solid $black;
-    color: $black;
+    border-bottom: 1px solid var(--black);
+    color: var(--black);
     background-color: transparent;
     font-size: 14px;
     resize: none;
@@ -157,18 +158,21 @@
   ::-moz-placeholder,
   :-ms-input-placeholder,
   :-moz-placeholder{
-    color: $main-color;
+    color: var(--mainColor);
     opacity: 1;
   }
   
-  input:focus::-webkit-input-placeholder,
-  textarea:focus::-webkit-input-placeholder{
-    opacity: 0;
-    transition: 0.3s;
+  input, textarea{
+    &:focus::-webkit-input-placeholder{
+      opacity: 0;
+      transition: 0.3s;
+    }
   }
   
-  input:focus, textarea:focus {
-    border-color: $main-color !important;
+  input, textarea {
+    &:focus{
+      border-color: var(--mainColor) !important;
+    }
   }
 
   //  Slider Owl
@@ -195,7 +199,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $white;
+  background-color: var(--white);
   z-index: 99999;
   .loading{
     width: 80px;
@@ -205,29 +209,29 @@
     span{
       width: 32px;
       height: 32px;
-      background-color: $main-color;
+      background-color: var(--mainColor);
       margin: 4px;
       animation: scale 1.5s linear infinite;
       &:nth-child(1){
         border-radius: 50% 50% 0 50%;
-        background-color: $main-color;
+        background-color: var(--mainColor);
         transform-origin: bottom right;
       }
       &:nth-child(2){
         border-radius: 50% 50% 50% 0;
-        background-color: $item-color;
+        background-color: var(--itemColor);
         transform-origin: bottom left;
         animation-delay: .5s;
       }
       &:nth-child(3){
         border-radius: 50% 0 50% 50%;
-        background-color: $color-check;
+        background-color: var(--colorCheck);
         transform-origin: top right;
         animation-delay: 1.5s;
       }
       &:nth-child(4){
         border-radius: 0 50% 50% 50%;
-        background-color: $black;
+        background-color: var(--black);
         transform-origin: top left;
         animation-delay: 1s;
       }

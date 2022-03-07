@@ -1,10 +1,12 @@
 // Colors
 
-$main-color         : #0E77FF;
-$shape-color        : #68BAE5;
-$item-color         : #E5F4FF;
-$bg-check           : #E4FFF2;
-$color-check        : #4BFFA6;
-$bgCheck            : #E4FFF2;
-$white              : #FFF;
-$black              : #000000;
+:root{
+    --mainColor             : #0E77FF;
+    --shapeColor            : #68BAE5;
+    --itemColor             : #E5F4FF;
+    --bgCheck               : #E4FFF2;
+    --colorCheck            : #4BFFA6;
+    --bgCheck               : #E4FFF2;
+    --white                 : #FFF;
+    --black                 : #000000;
+}

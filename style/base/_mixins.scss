@@ -23,3 +23,12 @@
     right: $right;
     margin: auto;
 }
+
+@mixin wave($time, $index, $opacity, $delay, $bottom, $name){
+    animation: $name $time linear infinite;
+    -webkit-animation: $name $time linear infinite;
+    z-index: $index;
+    opacity: $opacity;
+    animation-delay: $delay;
+    bottom: $bottom;
+}
