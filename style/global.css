@@ -317,11 +317,6 @@ input:focus, textarea:focus {
   z-index: 9;
 }
 
-.theme-color html[dir=rtl] {
-  right: auto;
-  left: 0;
-}
-
 .theme-color button {
   width: 30px;
   height: 30px;
@@ -354,34 +349,43 @@ input:focus, textarea:focus {
   width: 100%;
 }
 
+.section-head .header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
 .section-head .header .head-header .logo img {
   max-width: 180px;
 }
 
-.section-head .header .head-header ul li a {
-  position: relative;
+.section-head .header .head-header ul .active a {
+  color: var(--mainColor) !important;
 }
 
-.section-head .header .head-header ul li a::after {
-  content: "";
+.section-head .header .head-header ul .marker {
   position: absolute;
-  right: 0;
-  bottom: -10px;
-  width: 0;
-  height: 1px;
-  background-color: var(--white);
+  left: 468px;
+  height: 70px;
+  width: 74px;
+  background: var(--white);
+  top: -28px;
+  border-radius: 0 0 10px 10px;
   transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
 }
 
-.section-head .header .head-header ul li a:hover::after {
-  width: 100%;
-}
-
-.section-head .header .head-header ul li.active a::after {
-  width: 100%;
+.section-head .header .head-header .btn-lang {
+  border: 1px solid var(--mainColor);
+  background-color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  line-height: 40px;
+  text-align: center;
 }
 
 .section-head .wave-section {
@@ -538,5 +542,14 @@ input:focus, textarea:focus {
     border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     background: linear-gradient(45deg, var(--white) 0%, var(--white) 100%);
   }
+}
+
+html[dir=ltr] .theme-color {
+  right: auto;
+  left: 0;
+}
+
+html[dir=ltr] .marker {
+  left: 11px !important;
 }
 /*# sourceMappingURL=global.css.map */

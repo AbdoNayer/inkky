@@ -12,10 +12,6 @@
     transition: 0.5s;
     z-index: 9;
     // transform: translateX(100%);
-    html[dir=rtl] {
-        right: auto;
-        left: 0;
-    }
     button{
         width: 30px;
         height: 30px;
@@ -45,6 +41,9 @@
     width: 100%;
     // Section Header
     .header{
+        position: sticky;
+        top: 0;
+        z-index: 999;
         .head-header{
             .logo{
                 img{
@@ -52,33 +51,30 @@
                 }
             }
             ul{
-                li{
+                .active{
                     a{
-                        position: relative;
-                        &::after{
-                            content: "";
-                            position: absolute;
-                            right: 0;
-                            bottom: -10px;
-                            width: 0;
-                            height: 1px;
-                            background-color: var(--white);
-                            @include transition;
-                        }
-                        &:hover{
-                            &::after{
-                                width: 100%;
-                            }
-                        }
-                    }
-                    &.active{
-                        a{
-                            &::after{
-                                width: 100%;
-                            }
-                        }
+                        color: var(--mainColor) !important;
                     }
                 }
+                .marker{
+                    position: absolute;
+                    left: 468px;
+                    height: 70px;
+                    width: 74px;
+                    background: var(--white);
+                    top: -28px;
+                    border-radius: 0 0 10px 10px;
+                    @include transition;
+                }
+            }
+            .btn-lang{
+                border: 1px solid var(--mainColor);
+                background-color: var(--white);
+                width: 40px;
+                height: 40px;
+                border-radius: 5px;
+                line-height: 40px;
+                text-align: center;
             }
         }
     }
@@ -165,10 +161,3 @@
   
   
 }
-
-
-
-
-
-
-

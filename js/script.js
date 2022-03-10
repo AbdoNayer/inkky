@@ -11,6 +11,24 @@ $(window).on('load', function () {
         root.style.setProperty('--mainColor', '#0E77FF');
     }
 
+    // Set Lang On Page Load
+
+    const lang = localStorage.getItem("langPage");
+
+    if(lang === 'ar'){
+        $( "html" ).attr("dir", "rtl");
+        document.getElementsByClassName("btn-lang").value =  'en';
+        $(".btn-lang").text('EN');
+    }else if(lang === 'en'){
+        $( "html" ).attr("dir", "ltr");
+        document.getElementsByClassName("btn-lang").value =  'ar';
+        $(".btn-lang").text('AR')
+    }else {
+        $( "html" ).attr("dir", "rtl");
+        document.getElementsByClassName("btn-lang").value =  'en';
+        $(".btn-lang").text('EN');
+    }
+
     // Loading Page
     $(".loader").fadeOut(500,function(){
         $(".loading").delay(1000).fadeOut(500);
@@ -25,16 +43,18 @@ $(window).on('load', function () {
 
 $(document).ready(function () {
 
-    // Click Open Nav Mobile
-
-    $(document).on("click", ".click-nav",function() {
-        $(".handle").toggleClass("closed bgDefault");
-        $(".click-nav").toggleClass("m-0");
-        $(".list-item").toggleClass("back");
+    // Click Add class Link
+    
+    $(document).on("click", ".header ul li",function(e) {
+        e.preventDefault()
+        $(this).addClass('active').siblings().removeClass('active');
+        const marker            = document.querySelector(".header ul .marker");
+        marker.style.left       = e.target.offsetLeft  - 10     + "px";
+        marker.style.width      = e.target.offsetWidth + 20    + "px";
     });
 
-    // Change Color Theme
 
+    // Change Color Theme
     $(document).on("click", ".theme-color button",function() {
         let root = document.querySelector(':root');
         root.style.setProperty('--mainColor', $(this).data('color'));
@@ -43,6 +63,28 @@ $(document).ready(function () {
     
     // Change Lang
 
+    $(document).on("click", ".btn-lang",function() {
+
+        const LangVal   = document.getElementsByClassName("btn-lang").value;
+
+        console.log('LangVal----', LangVal)
+        if(LangVal === 'ar'){
+            $( "html" ).attr("dir", "rtl");
+            document.getElementsByClassName("btn-lang").value =  'en';
+            $(".btn-lang").text('EN');
+        }else if(LangVal === 'en'){
+            $( "html" ).attr("dir", "ltr");
+            document.getElementsByClassName("btn-lang").value =  'ar';
+            $(".btn-lang").text('AR')
+        }else {
+            $( "html" ).attr("dir", "rtl");
+            document.getElementsByClassName("btn-lang").value =  'en';
+            $(".btn-lang").text('EN');
+        }
+
+        localStorage.setItem("langPage", LangVal);
+    
+    });
 
 
     // Owl Slider
