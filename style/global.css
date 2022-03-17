@@ -366,9 +366,7 @@ input:focus, textarea:focus {
 
 .section-head .header .head-header ul .marker {
   position: absolute;
-  left: 468px;
   height: 70px;
-  width: 74px;
   background: var(--white);
   top: -28px;
   border-radius: 0 0 10px 10px;
@@ -550,6 +548,12 @@ html[dir=ltr] .theme-color {
 }
 
 html[dir=ltr] .marker {
-  left: 11px !important;
+  left: 6px;
+  width: 60px;
+}
+
+html[dir=rtl] .marker {
+  left: 468px;
+  width: 74px;
 }
 /*# sourceMappingURL=global.css.map */

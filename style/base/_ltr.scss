@@ -4,6 +4,14 @@ html[dir=ltr] {
         left: 0;
     }
     .marker{
-        left: 11px !important;
+        left: 6px;
+        width: 60px;
+    }
+}
+
+html[dir=rtl] {
+    .marker{
+        left: 468px;
+        width: 74px;
     }
 }

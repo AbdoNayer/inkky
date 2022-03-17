@@ -12,7 +12,6 @@ $(window).on('load', function () {
     }
 
     // Set Lang On Page Load
-
     const lang = localStorage.getItem("langPage");
 
     if(lang === 'ar'){
@@ -40,19 +39,16 @@ $(window).on('load', function () {
 
 });
 
-
 $(document).ready(function () {
 
     // Click Add class Link
-    
     $(document).on("click", ".header ul li",function(e) {
         e.preventDefault()
         $(this).addClass('active').siblings().removeClass('active');
         const marker            = document.querySelector(".header ul .marker");
         marker.style.left       = e.target.offsetLeft  - 10     + "px";
-        marker.style.width      = e.target.offsetWidth + 20    + "px";
+        marker.style.width      = e.target.offsetWidth + 20     + "px";
     });
-
 
     // Change Color Theme
     $(document).on("click", ".theme-color button",function() {
@@ -62,33 +58,13 @@ $(document).ready(function () {
     });
     
     // Change Lang
-
     $(document).on("click", ".btn-lang",function() {
-
+        location.reload();
         const LangVal   = document.getElementsByClassName("btn-lang").value;
-
-        console.log('LangVal----', LangVal)
-        if(LangVal === 'ar'){
-            $( "html" ).attr("dir", "rtl");
-            document.getElementsByClassName("btn-lang").value =  'en';
-            $(".btn-lang").text('EN');
-        }else if(LangVal === 'en'){
-            $( "html" ).attr("dir", "ltr");
-            document.getElementsByClassName("btn-lang").value =  'ar';
-            $(".btn-lang").text('AR')
-        }else {
-            $( "html" ).attr("dir", "rtl");
-            document.getElementsByClassName("btn-lang").value =  'en';
-            $(".btn-lang").text('EN');
-        }
-
         localStorage.setItem("langPage", LangVal);
-    
     });
 
-
     // Owl Slider
-
     // $('#sliderHome').owlCarousel({
     //     loop:true,
     //     margin:0,
