@@ -2,10 +2,18 @@ html[dir=ltr] {
     .theme-color{
         right: auto;
         left: 0;
+        transform: translateX(-50px);
+        .btn-setting{
+            @include absoluteItem(50%, auto, -40px, -50%);
+            border-radius: 0px 10px 10px 0px;
+        }
     }
     .marker{
         left: 6px;
         width: 60px;
+    }
+    .theme-color, .block-about{
+        border-radius: 0px 10px 10px 0px;
     }
 }
 

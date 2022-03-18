@@ -63,6 +63,11 @@ $(document).ready(function () {
         const LangVal   = document.getElementsByClassName("btn-lang").value;
         localStorage.setItem("langPage", LangVal);
     });
+    
+    // Click Setting Color Page
+    $(document).on("click", ".btn-setting",function() {
+        $('.theme-color').toggleClass('back')
+    });
 
     // Owl Slider
     // $('#sliderHome').owlCarousel({

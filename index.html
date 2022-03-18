@@ -21,10 +21,11 @@
     <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/global.css">
     
 </head>
-<body style="height: 100000px;">
+<body>
 
     <!-- Start Loading Page -->
     <div class="loader">
@@ -43,6 +44,9 @@
         <button data-color="#840e0e"></button>
         <button data-color="#0E77FF"></button>
         <button data-color="#363636"></button>
+        <a class="btn-setting">
+            <i class="fa-solid fa-gear"></i>
+        </a>
     </div>
 
     <div class="section-head">
@@ -51,8 +55,8 @@
         <div class="header">
             <div class="container">
                 <div class="head-header d-flex align-items-center justify-content-between pt-3 pb-3">
-                    <a href="" class="logo" data-aos="zoom-in" data-aos-offset="0">
-                        <img src="./img/logo.png" alt="">
+                    <a href="" data-aos="zoom-in" data-aos-offset="0">
+                        <h1 id="logo" class="m-0 color-white"></h1>
                     </a>
                     <div class="d-flex align-items-center">
                         <ul class="d-flex align-items-center position-relative">
@@ -96,12 +100,8 @@
                 <div class="row">
                     <div class="col-md-6 col-xs-12 position-relative" data-aos="fade-up" data-aos-offset="0">
                         <div class="head-title">
-                            <h1 class="color-white">اهلا بك ف الآختيار الصحيح</h1>
-                            <p class="color-white">
-                                أولهما : أن كل ثقافة حقيقية هي ” اختيار ” و ” مجهود ” ،
-                                <br>
-                                وأنت لا تختار ما تسمعه في المذياع ولا ما تراه في السينما أو التلفاز
-                            </p>
+                            <h1 class="color-white" id="doneChoose"></h1>
+                            <p class="color-white" id="infoChoose"></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12">
@@ -118,8 +118,34 @@
 
     <!-- About Section -->
 
-    <div class="about-section pt-5 pb-5">
-
+    <div class="about-section pt-5 pb-5 d-flex align-items-center justify-content-between">
+        <div class="section-info-about flex-fill">
+            <div class="block-about">
+                <h2 id="titleAbout" class="title-info color-default"></h2>
+                <p id="infoAbout"></p>
+                <ul>
+                    <li class="mt-2 mb-2">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <strong id="li1"></strong>
+                    </li>
+                    <li class="mt-2 mb-2">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <strong id="li2"></strong>
+                    </li>
+                    <li class="mt-2 mb-2">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <strong id="li3"></strong>
+                    </li>
+                    <li class="mt-2 mb-2">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        <strong id="li4"></strong>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="img-about flex-fill text-center">
+            <img src="./img/12.png" style="max-width: 600px;" alt="">
+        </div>
     </div>
 
     <!--  -->

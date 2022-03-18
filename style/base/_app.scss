@@ -11,7 +11,9 @@
     right: 0;
     transition: 0.5s;
     z-index: 9;
-    // transform: translateX(100%);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 10px 0px 0px 10px;
+    transform: translateX(50px);
     button{
         width: 30px;
         height: 30px;
@@ -30,6 +32,36 @@
             background-color: #363636;
         }
     }
+    .btn-setting{
+        @include absoluteItem(50%, -40px, auto, -50%);
+        background-color: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px 0px 0px 10px;
+        font-size: 20px;
+        color: var(--mainColor);
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        i{
+            animation-name: spin;
+            animation-duration: 4000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes spin {
+            from {
+                transform:rotate(0deg);
+            }
+            to {
+                transform:rotate(360deg);
+            }
+        }
+    }
+}
+.back{
+    transform: translate(0) !important;
 }
 
 // Section Head
@@ -45,9 +77,47 @@
         top: 0;
         z-index: 999;
         .head-header{
-            .logo{
-                img{
-                    max-width: 180px;
+            #logo{
+                color: transparent;
+                -webkit-text-stroke: 2px var(--white);
+                position: relative;
+                font-family: system-ui;
+                &:before{
+                    content: "Sh3wZa";
+                    text-align: center;
+                    color: var(--mainColor);
+                    animation: animate44 4s ease-in-out infinite;
+                    @include absoluteItem(50%, 0, 0, -50%);
+                }
+            }
+            @keyframes animate44 {
+                0%,
+                100% {
+                    clip-path: polygon(
+                    0% 45%,
+                    16% 44%,
+                    33% 50%,
+                    54% 60%,
+                    70% 61%,
+                    84% 59%,
+                    100% 52%,
+                    100% 100%,
+                    0% 100%
+                    );
+                }
+                
+                50% {
+                    clip-path: polygon(
+                    0% 60%,
+                    15% 65%,
+                    34% 66%,
+                    51% 62%,
+                    67% 50%,
+                    84% 45%,
+                    100% 46%,
+                    100% 100%,
+                    0% 100%
+                    );
                 }
             }
             ul{
@@ -121,8 +191,8 @@
         padding-top: 300px;
         .head-title{
             @include absoluteItem(50%, 0, 0, -50%);
-            h1{
-                
+            p{
+                max-width: 400px
             }
         }
         .shape-anime{
@@ -161,4 +231,61 @@
     }
   
   
+}
+
+// Section About
+
+.about-section{
+    .block-about{
+        position: relative;
+        background-color: var(--white);
+        padding: 50px 90px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px 0px 0px 10px;
+        &::after{
+            content: "";
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            @include absoluteItem(50%, auto, 0, -50%);
+            width: 90%;
+            height: 110%;
+            border-radius: 10px;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        p{
+            max-width: 350px;
+        }
+        ul{
+            li{
+                display: flex;
+                align-items: center;
+                span{
+                    background-color: var(--mainColor);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 25px;
+                    height: 25px;
+                    margin-inline-end: 10px;
+                    border-radius: 5px;
+                    i{
+                        color: var(--white);
+                    }
+                }
+            }
+        }
+    }
 }
