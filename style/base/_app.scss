@@ -9,7 +9,7 @@
     position: fixed;
     top: 40%;
     right: 0;
-    transition: 0.5s;
+    @include transition(0.5s);
     z-index: 9;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 10px 0px 0px 10px;
@@ -60,15 +60,36 @@
         }
     }
 }
-.back{
-    transform: translate(0) !important;
+
+// Section Head
+.title-info{
+    position: relative;
+    &::after{
+        content: "";
+        @include absoluteItem(50%, auto, -20px, -50%);
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 15px solid var(--mainColor);
+        border-bottom: 10px solid transparent;
+    }
+    &::before{
+        content: "";
+        @include absoluteItem(50%, auto, -15px, -50%);
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-left: 7px solid var(--white);
+        border-bottom: 4px solid transparent;
+        z-index: 9;
+    }
 }
 
 // Section Head
 .section-head{
     height: 100vh;
     background-color: var(--mainColor);
-    transition: 0.5s;
+    @include transition(0.5s);
     position: relative;
     width: 100%;
     // Section Header
@@ -83,7 +104,7 @@
                 position: relative;
                 font-family: system-ui;
                 &:before{
-                    content: "Sh3wZa";
+                    content: "Sh3wiZo";
                     text-align: center;
                     color: var(--mainColor);
                     animation: animate44 4s ease-in-out infinite;
@@ -132,7 +153,7 @@
                     background: var(--white);
                     top: -28px;
                     border-radius: 0 0 10px 10px;
-                    @include transition;
+                    @include transition(0.5s);
                 }
             }
             .btn-lang{
@@ -206,7 +227,7 @@
                 animation: morph 4s ease-in-out infinite;
                 border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
                 height: 400px;
-                transition: all 1s ease-in-out;
+                @include transition(1s);
                 width: 400px;
                 z-index: 5;
                 margin: auto;
@@ -234,7 +255,6 @@
 }
 
 // Section About
-
 .about-section{
     .block-about{
         position: relative;
@@ -244,7 +264,7 @@
         border-radius: 10px 0px 0px 10px;
         &::after{
             content: "";
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background: linear-gradient(-45deg, var(--mainColor), var(--secondColor), var(--colorCheck), var(--white));
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             @include absoluteItem(50%, auto, 0, -50%);
@@ -285,6 +305,47 @@
                         color: var(--white);
                     }
                 }
+            }
+        }
+    }
+}
+
+// Section Services
+.services-section{
+    background: linear-gradient(0deg, var(--mainColor), var(--white));
+    .block-services{
+        background-color: var(--white);
+        border-radius: 10px;
+        overflow: hidden;
+        @include transition(0.3s);
+        img{
+            max-width: 70px;
+        }
+        h4{
+            @include transition(0.3s);
+        }
+        &::after{
+            content: "";
+            @include absoluteItem(-80px, 0, 0, 0%);
+            background-color: var(--mainColor);
+            width: 0%;
+            height: 0%;
+            border-radius: 100%;
+            opacity: 0;
+            visibility: hidden;
+            @include transition(0.3s);
+        }
+        &:hover{
+            transform: translateY(-10px);
+            &::after{
+                opacity: 1;
+                visibility: initial;
+                width: 100%;
+                height: 260px;
+                border-radius: 100px;
+            }
+            h4{
+                color: var(--white) !important;
             }
         }
     }

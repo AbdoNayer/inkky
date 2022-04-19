@@ -7,7 +7,7 @@ $(window).on('load', function () {
     }
 
     if(lang === 'ar'){
-        valName(`logo`,                     `Sh3wZa`);
+        valName(`logo`,                     `Sh3wiZo`);
         valName(`nameHome`,                 `الرئيسية`);
         valName(`nameAbout`,                `من نحن`);
         valName(`nameServices`,             `خدمات`);
@@ -32,7 +32,7 @@ $(window).on('load', function () {
         // valName(``,                         ``);
         // valName(``,                         ``);
     }else if(lang === 'en'){
-        valName(`logo`,                     `Sh3wZa`);
+        valName(`logo`,                     `Sh3wiZo`);
         valName(`nameHome`,                 `Home`);
         valName(`nameAbout`,                `About`);
         valName(`nameServices`,             `Services`);

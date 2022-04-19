@@ -19,7 +19,7 @@ body {
 }
 
 a, button, input, textarea, i{
-  @include transition;
+  @include transition(0.5s);
 }
 
 img{
@@ -173,6 +173,11 @@ input, textarea {
   &:focus{
     border-color: var(--mainColor) !important;
   }
+}
+
+// Back Translate
+.back{
+  transform: translate(0) !important;
 }
 
 //  Slider Owl
