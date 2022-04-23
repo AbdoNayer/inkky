@@ -2,6 +2,9 @@
 
 $(window).on('load', function () {
 
+    
+    var mixer = mixitup('.container-item');
+
     // Color Theme Page
     let valColor    = localStorage.getItem('valColor');
     let root        = document.querySelector(':root');

@@ -264,7 +264,7 @@
         border-radius: 10px 0px 0px 10px;
         &::after{
             content: "";
-            background: linear-gradient(-45deg, var(--mainColor), var(--secondColor), var(--colorCheck), var(--white));
+            background: linear-gradient(-45deg, var(--mainColor), var(--mainColor), var(--mainColor), var(--white));
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             @include absoluteItem(50%, auto, 0, -50%);
@@ -308,6 +308,11 @@
             }
         }
     }
+    .img-about{
+        img{
+            max-width: 700px;
+        }
+    }
 }
 
 // Section Services
@@ -317,36 +322,98 @@
         background-color: var(--white);
         border-radius: 10px;
         overflow: hidden;
-        @include transition(0.3s);
+        @include transition(0.5s);
         img{
             max-width: 70px;
         }
-        h4{
-            @include transition(0.3s);
+        h4, p{
+            @include transition(0.5s);
         }
         &::after{
             content: "";
-            @include absoluteItem(-80px, 0, 0, 0%);
-            background-color: var(--mainColor);
-            width: 0%;
-            height: 0%;
-            border-radius: 100%;
+            @include absoluteItem(0, -100%, 0, 0);
+            width: 0;
+            height: 0;
+            border-top: 314px solid var(--mainColor);
+            border-right: 416px solid transparent;
+            @include transition(0.5s);
             opacity: 0;
             visibility: hidden;
-            @include transition(0.3s);
+        }
+        &::before{
+            content: "";
+            @include absoluteItem(0, 0, -100%, 0);
+            width: 0;
+            height: 0;
+            border-bottom: 314px solid var(--mainColor);
+            border-left: 416px solid transparent;
+            @include transition(0.5s);
+            opacity: 0;
+            visibility: hidden;
         }
         &:hover{
-            transform: translateY(-10px);
-            &::after{
+            transform: scale(0.9);
+            &::after, &::before{
                 opacity: 1;
                 visibility: initial;
-                width: 100%;
-                height: 260px;
-                border-radius: 100px;
             }
-            h4{
+            &::after{
+                left: 0;
+            }
+            &::before{
+                right: 0;
+            }
+            h4, p{
                 color: var(--white) !important;
             }
+        }
+    }
+}
+
+// Section Projects
+.projects-section{
+    .tab-filter{
+        li{
+            padding: 10px 20px;
+            color: var(--mainColor);
+            position: relative;
+            overflow: hidden;
+            @include transition(0.5s);
+            cursor: pointer;
+            &::after{
+                content: "";
+                background-color: var(--mainColor);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                right: 0;
+                top: 100%;
+                opacity: 0;
+                visibility: hidden;
+                @include transition(0.5s);
+                z-index: -1;
+            }
+            &.mixitup-control-active{
+                color: #FFF;
+                &::after{
+                    top: 0;
+                    opacity: 1;
+                    visibility: initial;
+                }
+            }
+        }
+    }
+    .box-project{
+        border: 1px solid #DDD;
+        overflow: hidden;
+        border-radius: 10px;
+        @include transition(0.5s);
+        img{
+            width: 100%;
+            height: 350px;
+        }
+        &:hover{
+            transform: scale(0.9);
         }
     }
 }

@@ -709,7 +709,7 @@ input:focus, textarea:focus {
 
 .about-section .block-about::after {
   content: "";
-  background: linear-gradient(-45deg, var(--mainColor), var(--secondColor), var(--colorCheck), var(--white));
+  background: linear-gradient(-45deg, var(--mainColor), var(--mainColor), var(--mainColor), var(--white));
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
           animation: gradient 15s ease infinite;
@@ -786,6 +786,10 @@ input:focus, textarea:focus {
   color: var(--white);
 }
 
+.about-section .img-about img {
+  max-width: 700px;
+}
+
 .services-section {
   background: -webkit-gradient(linear, left bottom, left top, from(var(--mainColor)), to(var(--white)));
   background: linear-gradient(0deg, var(--mainColor), var(--white));
@@ -795,59 +799,144 @@ input:focus, textarea:focus {
   background-color: var(--white);
   border-radius: 10px;
   overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .services-section .block-services img {
   max-width: 70px;
 }
 
-.services-section .block-services h4 {
-  transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
+.services-section .block-services h4, .services-section .block-services p {
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .services-section .block-services::after {
   content: "";
   position: absolute;
-  top: -80px;
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-  left: 0;
+  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  left: -100%;
   right: 0;
   margin: auto;
-  background-color: var(--mainColor);
-  width: 0%;
-  height: 0%;
-  border-radius: 100%;
+  width: 0;
+  height: 0;
+  border-top: 314px solid var(--mainColor);
+  border-right: 416px solid transparent;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
+}
+
+.services-section .block-services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  left: 0;
+  right: -100%;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-bottom: 314px solid var(--mainColor);
+  border-left: 416px solid transparent;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .services-section .block-services:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.services-section .block-services:hover::after, .services-section .block-services:hover::before {
+  opacity: 1;
+  visibility: initial;
 }
 
 .services-section .block-services:hover::after {
-  opacity: 1;
-  visibility: initial;
-  width: 100%;
-  height: 260px;
-  border-radius: 100px;
+  left: 0;
 }
 
-.services-section .block-services:hover h4 {
+.services-section .block-services:hover::before {
+  right: 0;
+}
+
+.services-section .block-services:hover h4, .services-section .block-services:hover p {
   color: var(--white) !important;
+}
+
+.projects-section .tab-filter li {
+  padding: 10px 20px;
+  color: var(--mainColor);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.projects-section .tab-filter li::after {
+  content: "";
+  background-color: var(--mainColor);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  top: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.projects-section .tab-filter li.mixitup-control-active {
+  color: #FFF;
+}
+
+.projects-section .tab-filter li.mixitup-control-active::after {
+  top: 0;
+  opacity: 1;
+  visibility: initial;
+}
+
+.projects-section .box-project {
+  border: 1px solid #DDD;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.projects-section .box-project img {
+  width: 100%;
+  height: 350px;
+}
+
+.projects-section .box-project:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 html[dir=ltr] .theme-color {
@@ -878,7 +967,7 @@ html[dir=ltr] .theme-color, html[dir=ltr] .block-about {
 }
 
 html[dir=rtl] .marker {
-  left: 468px;
+  left: 438px;
   width: 74px;
 }
 /*# sourceMappingURL=global.css.map */

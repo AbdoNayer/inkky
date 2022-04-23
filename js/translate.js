@@ -11,7 +11,7 @@ $(window).on('load', function () {
         valName(`nameHome`,                 `الرئيسية`);
         valName(`nameAbout`,                `من نحن`);
         valName(`nameServices`,             `خدمات`);
-        valName(`nameStudies`,              `دراسات الحالة`);
+        valName(`projects`,                 `المشاريع`);
         valName(`nameTestimonials`,         `الشهادات`);
         valName(`nameContact`,              `إتصل بنا`);
         valName(`doneChoose`,               `اهلا بك ف الآختيار الصحيح`);
@@ -22,11 +22,11 @@ $(window).on('load', function () {
         valName(`li2`,                      `كتابه كود من آحسن التقنيات الحديثه`);
         valName(`li3`,                      `عمل خلفيات من آحدث الخلفيات`);
         valName(`li4`,                      `منظمات وتحديثات وتحديات ف كل مجال`);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
+        valName(`titleServices`,            `الخدمات`);
+        valName(`all`,                      `الكل`);
+        valName(`webDes`,                   `تصميم المواقع`);
+        valName(`react`,                    `مواقع رياكت`);
+        valName(`netive`,                   `تطبيقات`);
         // valName(``,                         ``);
         // valName(``,                         ``);
         // valName(``,                         ``);
@@ -36,7 +36,7 @@ $(window).on('load', function () {
         valName(`nameHome`,                 `Home`);
         valName(`nameAbout`,                `About`);
         valName(`nameServices`,             `Services`);
-        valName(`nameStudies`,              `Studies`);
+        valName(`projects`,                 `projects`);
         valName(`nameTestimonials`,         `Testimonials`);
         valName(`nameContact`,              `Contact`);
         valName(`doneChoose`,               `Welcome To The Right Choice`);
@@ -47,8 +47,11 @@ $(window).on('load', function () {
         valName(`li2`,                      `Writing a code is one of the best modern technologies`);
         valName(`li3`,                      `Make wallpapers from the latest backgrounds`);
         valName(`li4`,                      `Organizations, updates and challenges in every field`);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
+        valName(`titleServices`,            `Our Services`);
+        valName(`all`,                      `All`);
+        valName(`webDes`,                   `Web Developer`);
+        valName(`react`,                    `React Js`);
+        valName(`netive`,                   `React Native`);
         // valName(``,                         ``);
         // valName(``,                         ``);
         // valName(``,                         ``);
