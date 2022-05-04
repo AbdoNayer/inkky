@@ -81,5 +81,6 @@ $(window).on('load', function () {
         valName(`webDes`,                   `تصميم المواقع`);
         valName(`react`,                    `مواقع رياكت`);
         valName(`netive`,                   `تطبيقات`);
+        valName(`sentForm`,                 `إرسال`);
     }
 });
