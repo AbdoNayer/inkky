@@ -15,6 +15,21 @@ html[dir=ltr] {
     .theme-color, .block-about{
         border-radius: 0px 10px 10px 0px;
     }
+    .title-info{
+        position: relative;
+        &::after{
+            content: "";
+            @include absoluteItem(50%, -20px, auto, -50%);
+            border-left: 0px solid var(--mainColor);
+            border-right: 15px solid var(--mainColor);
+        }
+        &::before{
+            content: "";
+            @include absoluteItem(50%, -15px, auto, -50%);
+            border-left: 0px solid var(--white);
+            border-right: 7px solid var(--white);
+        }
+    }
 }
 
 html[dir=rtl] {

@@ -310,7 +310,7 @@
     }
     .img-about{
         img{
-            max-width: 700px;
+            max-width: 500px;
         }
     }
 }
@@ -334,7 +334,7 @@
             @include absoluteItem(0, -100%, 0, 0);
             width: 0;
             height: 0;
-            border-top: 314px solid var(--mainColor);
+            border-top: 232px solid var(--mainColor);
             border-right: 416px solid transparent;
             @include transition(0.5s);
             opacity: 0;
@@ -345,7 +345,7 @@
             @include absoluteItem(0, 0, -100%, 0);
             width: 0;
             height: 0;
-            border-bottom: 314px solid var(--mainColor);
+            border-bottom: 232px solid var(--mainColor);
             border-left: 416px solid transparent;
             @include transition(0.5s);
             opacity: 0;
@@ -417,3 +417,69 @@
         }
     }
 }
+
+// Section Contact 
+.contact-section{
+    background-image: url(../../img/222.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    .over-contact{
+        background-color: rgba(0,0,0,0.7);
+    }
+}
+
+// Section Footer
+footer{
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: #f1f1f1;
+        margin: 10px;
+        border-radius: 5px;
+        color: var(--mainColor);
+        overflow: hidden;
+        position: relative;
+        i{
+            font-size: 18px;
+            transition: 0.2s linear;
+        }
+        &:hover i{
+            transform: scale(1.1);
+            color: #f1f1f1;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 120%;
+            background: var(--mainColor);
+            transform: rotate(45deg);
+            left: -110%;
+            top: 90%;
+        }
+        &:hover::before{
+            animation: socialMedia 0.7s 1;
+            top: -10%;
+            left: -10%;
+        }
+    }
+}
+
+@keyframes socialMedia {
+    0%{
+        left: -110%;
+        top: 90%;
+    }50%{
+        left: 10%;
+        top: -30%;
+    }100%{
+        top: -10%;
+        left: -10%;
+    }
+}
+  

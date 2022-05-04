@@ -214,84 +214,85 @@ input:focus, textarea:focus {
 }
 
 .loader .loading {
-  width: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-animation: rotate 3s linear infinite;
-          animation: rotate 3s linear infinite;
+  position: relative;
+  top: -50px;
 }
 
 .loader .loading span {
-  width: 32px;
-  height: 32px;
-  background-color: var(--mainColor);
-  margin: 4px;
-  -webkit-animation: scale 1.5s linear infinite;
-          animation: scale 1.5s linear infinite;
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-animation: speed 2s infinite ease-in-out;
+          animation: speed 2s infinite ease-in-out;
 }
 
 .loader .loading span:nth-child(1) {
-  border-radius: 50% 50% 0 50%;
-  background-color: var(--mainColor);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-}
-
-.loader .loading span:nth-child(2) {
-  border-radius: 50% 50% 50% 0;
-  background-color: var(--itemColor);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
-}
-
-.loader .loading span:nth-child(3) {
-  border-radius: 50% 0 50% 50%;
-  background-color: var(--colorCheck);
-  -webkit-transform-origin: top right;
-          transform-origin: top right;
+  background: var(--mainColor);
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
 
-.loader .loading span:nth-child(4) {
-  border-radius: 0 50% 50% 50%;
-  background-color: var(--black);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+.loader .loading span:nth-child(2) {
+  background: var(--black);
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }
 
-@-webkit-keyframes rotate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.loader .loading span:nth-child(3) {
+  background: var(--mainColor);
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
-@keyframes rotate {
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+.loader .loading span:nth-child(4) {
+  background: var(--black);
 }
 
-@-webkit-keyframes scale {
+@-webkit-keyframes speed {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    border-radius: 50%;
+  }
+  25% {
+    -webkit-transform: translate(150%) scale(0.5);
+            transform: translate(150%) scale(0.5);
+    border-radius: 0%;
+  }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: translate(150%, 150%);
+            transform: translate(150%, 150%);
+    border-radius: 50%;
+  }
+  75% {
+    -webkit-transform: translate(0, 150%) scale(0.5);
+            transform: translate(0, 150%) scale(0.5);
+    border-radius: 0%;
   }
 }
 
-@keyframes scale {
+@keyframes speed {
+  0% {
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
+    border-radius: 50%;
+  }
+  25% {
+    -webkit-transform: translate(150%) scale(0.5);
+            transform: translate(150%) scale(0.5);
+    border-radius: 0%;
+  }
   50% {
-    -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+    -webkit-transform: translate(150%, 150%);
+            transform: translate(150%, 150%);
+    border-radius: 50%;
+  }
+  75% {
+    -webkit-transform: translate(0, 150%) scale(0.5);
+            transform: translate(0, 150%) scale(0.5);
+    border-radius: 0%;
   }
 }
 
@@ -787,7 +788,7 @@ input:focus, textarea:focus {
 }
 
 .about-section .img-about img {
-  max-width: 700px;
+  max-width: 500px;
 }
 
 .services-section {
@@ -827,7 +828,7 @@ input:focus, textarea:focus {
   margin: auto;
   width: 0;
   height: 0;
-  border-top: 314px solid var(--mainColor);
+  border-top: 232px solid var(--mainColor);
   border-right: 416px solid transparent;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -848,7 +849,7 @@ input:focus, textarea:focus {
   margin: auto;
   width: 0;
   height: 0;
-  border-bottom: 314px solid var(--mainColor);
+  border-bottom: 232px solid var(--mainColor);
   border-left: 416px solid transparent;
   transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -939,6 +940,99 @@ input:focus, textarea:focus {
           transform: scale(0.9);
 }
 
+.contact-section {
+  background-image: url(../../img/222.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.contact-section .over-contact {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 5px;
+  color: var(--mainColor);
+  overflow: hidden;
+  position: relative;
+}
+
+footer a i {
+  font-size: 18px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+footer a:hover i {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #f1f1f1;
+}
+
+footer a::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: var(--mainColor);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+footer a:hover::before {
+  -webkit-animation: socialMedia 0.7s 1;
+          animation: socialMedia 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@-webkit-keyframes socialMedia {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
+@keyframes socialMedia {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+
 html[dir=ltr] .theme-color {
   right: auto;
   left: 0;
@@ -964,6 +1058,36 @@ html[dir=ltr] .marker {
 
 html[dir=ltr] .theme-color, html[dir=ltr] .block-about {
   border-radius: 0px 10px 10px 0px;
+}
+
+html[dir=ltr] .title-info {
+  position: relative;
+}
+
+html[dir=ltr] .title-info::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -20px;
+  right: auto;
+  margin: auto;
+  border-left: 0px solid var(--mainColor);
+  border-right: 15px solid var(--mainColor);
+}
+
+html[dir=ltr] .title-info::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -15px;
+  right: auto;
+  margin: auto;
+  border-left: 0px solid var(--white);
+  border-right: 7px solid var(--white);
 }
 
 html[dir=rtl] .marker {
