@@ -3,8 +3,6 @@ $(window).on('load', function () {
     let lang    = localStorage.getItem("langPage");
 
     function valName(val, text){
-        console.log('val ----', val)
-        console.log('text ----', text)
         document.getElementById(val).innerHTML = text;
     }
 
@@ -62,13 +60,25 @@ $(window).on('load', function () {
         // valName(``,                         ``);
         // valName(``,                         ``);
     }else {
+        valName(`logo`,                     `Sh3wiZo`);
         valName(`nameHome`,                 `الرئيسية`);
         valName(`nameAbout`,                `من نحن`);
         valName(`nameServices`,             `خدمات`);
-        valName(`nameStudies`,              `دراسات الحالة`);
+        valName(`projects`,                 `المشاريع`);
         valName(`nameTestimonials`,         `الشهادات`);
         valName(`nameContact`,              `إتصل بنا`);
         valName(`doneChoose`,               `اهلا بك ف الآختيار الصحيح`);
         valName(`infoChoose`,               `أولهما : أن كل ثقافة حقيقية هي ” اختيار ” و ” مجهود ” ، وأنت لا تختار ما تسمعه في المذياع ولا ما تراه في السينما أو التلفاز`);
+        valName(`titleAbout`,               `من نحن`);
+        valName(`infoAbout`,                `منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.`);
+        valName(`li1`,                      `تصميم المواقع وتصميم الابلكيشن`);
+        valName(`li2`,                      `كتابه كود من آحسن التقنيات الحديثه`);
+        valName(`li3`,                      `عمل خلفيات من آحدث الخلفيات`);
+        valName(`li4`,                      `منظمات وتحديثات وتحديات ف كل مجال`);
+        valName(`titleServices`,            `الخدمات`);
+        valName(`all`,                      `الكل`);
+        valName(`webDes`,                   `تصميم المواقع`);
+        valName(`react`,                    `مواقع رياكت`);
+        valName(`netive`,                   `تطبيقات`);
     }
 });
