@@ -3,6 +3,8 @@ $(window).on('load', function () {
     let lang    = localStorage.getItem("langPage");
 
     function valName(val, text){
+        console.log('val ----', val)
+        console.log('text ----', text)
         document.getElementById(val).innerHTML = text;
     }
 
