@@ -27,7 +27,7 @@ $(window).on('load', function () {
         valName(`webDes`,                   `تصميم المواقع`);
         valName(`react`,                    `مواقع رياكت`);
         valName(`netive`,                   `تطبيقات`);
-        // valName(``,                         ``);
+        valName(`sentForm`,                 `إرسال`);
         // valName(``,                         ``);
         // valName(``,                         ``);
         // valName(``,                         ``);
@@ -52,6 +52,7 @@ $(window).on('load', function () {
         valName(`webDes`,                   `Web Developer`);
         valName(`react`,                    `React Js`);
         valName(`netive`,                   `React Native`);
+        valName(`sentForm`,                 `Sent`);
         // valName(``,                         ``);
         // valName(``,                         ``);
         // valName(``,                         ``);

@@ -420,18 +420,39 @@
 
 // Section Contact 
 .contact-section{
-    background-image: url(../../img/222.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    .over-contact{
-        background-color: rgba(0,0,0,0.7);
+    .form-section{
+        // background-image: url(../../img/222.jpg);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-attachment: fixed;
+        // width: 100%;
+        // background-color: var(--mainColor);
+        &::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-bottom: 610px solid var(--mainColor);
+            border-left: 825px solid transparent;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+        .over-contact{
+            z-index: 9;
+            // background-color: rgba(0,0,0,0.7);
+        }
+    }
+    .img-contact{
+        img{
+            max-width: 610px;
+        }
     }
 }
 
 // Section Footer
 footer{
+    background-color: var(--mainColor);
     a{
         display: flex;
         align-items: center;
