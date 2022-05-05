@@ -6,6 +6,10 @@ $(window).on('load', function () {
         document.getElementById(val).innerHTML = text;
     }
 
+    function valInput(val, text){
+        document.getElementById(val).placeholder = text;
+    }
+
     if(lang === 'ar'){
         valName(`logo`,                     `Sh3wiZo`);
         valName(`nameHome`,                 `الرئيسية`);
@@ -28,8 +32,10 @@ $(window).on('load', function () {
         valName(`react`,                    `مواقع رياكت`);
         valName(`netive`,                   `تطبيقات`);
         valName(`sentForm`,                 `إرسال`);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
+        valInput(`inName`,                  `الاسم بالكامل`);
+        valInput(`inMobile`,                `رقم الهاتف`);
+        valInput(`inEmail`,                 `البريد الالكتروني`);
+        valInput(`inInfo`,                  `الرساله`);
         // valName(``,                         ``);
     }else if(lang === 'en'){
         valName(`logo`,                     `Sh3wiZo`);
@@ -53,12 +59,10 @@ $(window).on('load', function () {
         valName(`react`,                    `React Js`);
         valName(`netive`,                   `React Native`);
         valName(`sentForm`,                 `Sent`);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
-        // valName(``,                         ``);
+        valInput(`inName`,                  `full name`);
+        valInput(`inMobile`,                `phone`);
+        valInput(`inEmail`,                 `email`);
+        valInput(`inInfo`,                  `message`);
         // valName(``,                         ``);
     }else {
         valName(`logo`,                     `Sh3wiZo`);
@@ -82,5 +86,9 @@ $(window).on('load', function () {
         valName(`react`,                    `مواقع رياكت`);
         valName(`netive`,                   `تطبيقات`);
         valName(`sentForm`,                 `إرسال`);
+        valInput(`inName`,                  `الاسم بالكامل`);
+        valInput(`inMobile`,                `رقم الهاتف`);
+        valInput(`inEmail`,                 `البريد الالكتروني`);
+        valInput(`inInfo`,                  `الرساله`);
     }
 });

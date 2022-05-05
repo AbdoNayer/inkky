@@ -97,6 +97,10 @@
         position: sticky;
         top: 0;
         z-index: 999;
+        width: 100%;
+        right: 0;
+        background-color: var(--mainColor);
+        @include transition(0.5s);
         .head-header{
             #logo{
                 color: transparent;
@@ -149,7 +153,7 @@
                 }
                 .marker{
                     position: absolute;
-                    height: 70px;
+                    height: 80px;
                     background: var(--white);
                     top: -28px;
                     border-radius: 0 0 10px 10px;
@@ -164,6 +168,21 @@
                 border-radius: 5px;
                 line-height: 40px;
                 text-align: center;
+            }
+        }
+        &.header-fixed{
+            position: fixed;
+            background: linear-gradient(0deg, var(--mainColor), var(--mainColor)) !important;
+            animation: slideDown 0.7s;
+        }
+        @keyframes slideDown {
+            0%{
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0%);   
             }
         }
     }
@@ -421,12 +440,6 @@
 // Section Contact 
 .contact-section{
     .form-section{
-        // background-image: url(../../img/222.jpg);
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // background-attachment: fixed;
-        // width: 100%;
-        // background-color: var(--mainColor);
         &::after{
             content: "";
             width: 0;

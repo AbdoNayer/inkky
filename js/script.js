@@ -44,6 +44,18 @@ $(window).on('load', function () {
 
 $(document).ready(function () {
 
+    // Scroll Fix Header
+
+    if($(window).width() > 990){
+        $(window).scroll(function () {
+            if($(this).scrollTop() > 30){
+                $('.header').addClass('header-fixed')
+            }else{
+                $('.header').removeClass('header-fixed')
+            }
+        });
+    }
+
     // Click Add class Link
     $(document).on("click", ".header ul li",function(e) {
         e.preventDefault()
@@ -53,11 +65,20 @@ $(document).ready(function () {
         marker.style.width      = e.target.offsetWidth + 20     + "px";
     });
 
+    // Scroll For Section
+    $(document).on("click", ".header ul li a",function(e) {
+        $('html, body').animate({
+            scrollTop: $('#' + $(this).data('value')).offset().top - 100
+        }, 1000);
+        e.preventDefault();
+    });
+
     // Change Color Theme
     $(document).on("click", ".theme-color button",function() {
         let root = document.querySelector(':root');
         root.style.setProperty('--mainColor', $(this).data('color'));
         localStorage.setItem('valColor',  $(this).data('color'));
+        $('.theme-color').toggleClass('back')
     });
     
     // Change Lang

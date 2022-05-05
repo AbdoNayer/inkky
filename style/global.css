@@ -478,6 +478,13 @@ input:focus, textarea:focus {
   position: sticky;
   top: 0;
   z-index: 999;
+  width: 100%;
+  right: 0;
+  background-color: var(--mainColor);
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .section-head .header .head-header #logo {
@@ -532,7 +539,7 @@ input:focus, textarea:focus {
 
 .section-head .header .head-header ul .marker {
   position: absolute;
-  height: 70px;
+  height: 80px;
   background: var(--white);
   top: -28px;
   border-radius: 0 0 10px 10px;
@@ -550,6 +557,40 @@ input:focus, textarea:focus {
   border-radius: 5px;
   line-height: 40px;
   text-align: center;
+}
+
+.section-head .header.header-fixed {
+  position: fixed;
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--mainColor)), to(var(--mainColor))) !important;
+  background: linear-gradient(0deg, var(--mainColor), var(--mainColor)) !important;
+  -webkit-animation: slideDown 0.7s;
+          animation: slideDown 0.7s;
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 .section-head .wave-section {
