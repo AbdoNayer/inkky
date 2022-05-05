@@ -30,6 +30,13 @@ html[dir=ltr] {
             border-right: 7px solid var(--white);
         }
     }
+    .contact-section{
+        .form-section{
+            &::after{
+                border-right: 825px solid transparent;
+            }
+        }
+    }
 }
 
 html[dir=rtl] {

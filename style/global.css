@@ -1158,6 +1158,10 @@ html[dir=ltr] .title-info::before {
   border-right: 7px solid var(--white);
 }
 
+html[dir=ltr] .contact-section .form-section::after {
+  border-right: 825px solid transparent;
+}
+
 html[dir=rtl] .marker {
   left: 438px;
   width: 74px;
