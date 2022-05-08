@@ -37,6 +37,22 @@ html[dir=ltr] {
             }
         }
     }
+    @media screen and (max-width: 990px){
+
+        // Section Head
+        .section-head{
+            // Section Header
+            .header{
+                .head-header{
+                    .head-links{
+                        left: 0;
+                        transform: translateX(-100%);
+                    }
+                }
+            }
+        }
+    
+    }
 }
 
 html[dir=rtl] {

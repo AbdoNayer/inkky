@@ -1,5 +1,145 @@
 @media screen and (max-width: 990px){
 
-    
+    .py-5 {
+        padding-top: 0rem!important;
+        padding-bottom: 0rem!important;
+    }
+
+    .pt-5 {
+        padding-top: 0rem!important;
+    }
+
+    // Section Head
+    .section-head{
+        // Section Header
+        .header{
+            .head-header{
+                .click-nav{
+                    display: inline-block;
+                }
+                .head-links{
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: 300px;
+                    height: 100%;
+                    background-color: var(--mainColor);
+                    flex-direction: column;
+                    align-items: initial !important;
+                    @include transition(0.5s);
+                    transform: translateX(100%);
+                    z-index: 99;
+                    ul{
+                        flex-direction: column;
+                        align-items: initial !important;
+                        width: 100%;
+                        li{
+                            display: block;
+                            a{
+                                display: block;
+                                padding: 15px;
+                            }
+                            &.active{
+                                background-color: var(--white);
+                            }
+                        }
+                        .marker{
+                            display: none;
+                        }
+                    }
+                    .btn-lang {
+                        width: 100%;
+                        border-radius: 0;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+        // Content View
+        .content-view{
+            padding: 5px;
+            padding-top: 25px;
+            .head-title{
+                position: relative;
+                top: 0;
+                transform: initial;
+            }
+            .shape-anime{
+                img{
+                    max-width: 100%;
+                }
+                .shape {
+                    height: 300px;
+                    width: 100%;
+                    position: relative;
+                    top: 0;
+                    transform: initial;
+                }
+            }
+        }
+    }
+
+    // Section About
+    .about-section{
+        flex-direction: column-reverse;
+        .block-about{
+            padding: 25px 35px;
+        }
+        .img-about{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+
+    // Section Projects
+    .projects-section{
+        padding-top: 2rem !important;
+        .tab-filter{
+            flex-wrap: wrap;
+            li{
+                flex-basis: 50%;
+                margin: 0 !important;
+                justify-content: center;
+                text-align: center;
+                &::after{
+                    content: "";
+                    background-color: var(--mainColor);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    right: 0;
+                    top: 100%;
+                    opacity: 0;
+                    visibility: hidden;
+                    @include transition(0.5s);
+                    z-index: -1;
+                }
+                &.mixitup-control-active{
+                    color: #FFF;
+                    &::after{
+                        top: 0;
+                        opacity: 1;
+                        visibility: initial;
+                    }
+                }
+            }
+        }
+    }
+
+    // Section Contact 
+    .contact-section{
+        .row{
+            flex-direction: column-reverse;
+        }
+        .img-contact{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+
 
 }

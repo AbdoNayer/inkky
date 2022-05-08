@@ -46,15 +46,13 @@ $(document).ready(function () {
 
     // Scroll Fix Header
 
-    if($(window).width() > 990){
-        $(window).scroll(function () {
-            if($(this).scrollTop() > 30){
-                $('.header').addClass('header-fixed')
-            }else{
-                $('.header').removeClass('header-fixed')
-            }
-        });
-    }
+    $(window).scroll(function () {
+        if($(this).scrollTop() > 30){
+            $('.header').addClass('header-fixed')
+        }else{
+            $('.header').removeClass('header-fixed')
+        }
+    });
 
     // Click Add class Link
     $(document).on("click", ".header ul li",function(e) {
@@ -71,6 +69,19 @@ $(document).ready(function () {
             scrollTop: $('#' + $(this).data('value')).offset().top - 100
         }, 1000);
         e.preventDefault();
+        if ($(window).width() < 990) {
+            $(".handle").toggleClass("closed bgDefault");
+            $(".click-nav").toggleClass("m-0");
+            $(".head-links").toggleClass("back");
+         }
+    });
+
+    // Click Open Nav Mobile
+
+    $(document).on("click", ".click-nav",function() {
+        $(".handle").toggleClass("closed bgDefault");
+        $(".click-nav").toggleClass("m-0");
+        $(".head-links").toggleClass("back");
     });
 
     // Change Color Theme
@@ -92,34 +103,5 @@ $(document).ready(function () {
     $(document).on("click", ".btn-setting",function() {
         $('.theme-color').toggleClass('back')
     });
-
-    // Owl Slider
-    // $('#sliderHome').owlCarousel({
-    //     loop:true,
-    //     margin:0,
-    //     center:true,
-    //     autoplay:true,
-    //     autoplayTimeout: 7000,
-    //     smartSpeed: 1000,
-    //     animateOut: 'fadeOut',
-    //     dragEndSpeed: 7000,
-    //     pagination : false,
-    //     nav:true,
-    //     navText: [
-    //         '<i class="icon-arrow-left"></i>',
-    //         '<i class="icon-arrow-right"></i>'
-    //     ],
-    //     responsive:{
-    //         0:{
-    //             items:1
-    //         },
-    //         900:{
-    //             items:1
-    //         },
-    //         1000:{
-    //             items:1
-    //         }
-    //     }
-    // });
 
 });
