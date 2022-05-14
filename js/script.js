@@ -82,6 +82,7 @@ $(document).ready(function () {
         $(".handle").toggleClass("closed bgDefault");
         $(".click-nav").toggleClass("m-0");
         $(".head-links").toggleClass("back");
+        
     });
 
     // Change Color Theme
