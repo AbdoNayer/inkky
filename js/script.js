@@ -2,8 +2,34 @@
 
 $(window).on('load', function () {
 
+    // Lazy Load
+    var lazyloadImages = document.querySelectorAll("img.lazy");    
+    var lazyloadThrottleTimeout;
     
-    var mixer = mixitup('.container-item');
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+      
+      lazyloadThrottleTimeout = setTimeout(function() {
+          var scrollTop = window.pageYOffset;
+          lazyloadImages.forEach(function(img) {
+              if(img.offsetTop < (window.innerHeight + scrollTop)) {
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+              }
+          });
+          if(lazyloadImages.length == 0) { 
+            document.removeEventListener("scroll", lazyload);
+            window.removeEventListener("resize", lazyload);
+            window.removeEventListener("orientationChange", lazyload);
+          }
+      }, 20);
+    }
+    
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
 
     // Color Theme Page
     let valColor    = localStorage.getItem('valColor');
@@ -13,6 +39,9 @@ $(window).on('load', function () {
     }else{
         root.style.setProperty('--mainColor', '#0E77FF');
     }
+
+    // Mixitup
+    var mixer = mixitup('.container-item');
 
     // Set Lang On Page Load
     const lang = localStorage.getItem("langPage");

@@ -18,8 +18,13 @@ $(window).on('load', function () {
         valName(`projects`,                 `المشاريع`);
         valName(`nameTestimonials`,         `الشهادات`);
         valName(`nameContact`,              `إتصل بنا`);
-        valName(`doneChoose`,               `اهلا بك ف الآختيار الصحيح`);
-        valName(`infoChoose`,               `أولهما : أن كل ثقافة حقيقية هي ” اختيار ” و ” مجهود ” ، وأنت لا تختار ما تسمعه في المذياع ولا ما تراه في السينما أو التلفاز`);
+        valName(`hello`,                    `اهلاََ بكم ...`);
+        valName(`text-1`,                   `هنا موقع التصميمات الرائعة`);
+        valName(`text-2`,                   `كل الآمكانيات الخاصة`);
+        valName(`text-3`,                   `مشاهدة احدث العروض`);
+        valName(`text-4`,                   `زيادة عدد المشاهدين`);
+        valName(`text-5`,                   `نسبة الرابحين`);
+        valName(`infoChoose`,               `كل الآشياء التي تريدها هنا علي اعلي مستوي من الخدمه .. وزياده عدد المشاهدين والرابحين تصفح الان  ، واشترك معنا`);
         valName(`titleAbout`,               `من نحن`);
         valName(`infoAbout`,                `منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.`);
         valName(`li1`,                      `تصميم المواقع وتصميم الابلكيشن`);
@@ -72,8 +77,13 @@ $(window).on('load', function () {
         valName(`projects`,                 `المشاريع`);
         valName(`nameTestimonials`,         `الشهادات`);
         valName(`nameContact`,              `إتصل بنا`);
-        valName(`doneChoose`,               `اهلا بك ف الآختيار الصحيح`);
-        valName(`infoChoose`,               `أولهما : أن كل ثقافة حقيقية هي ” اختيار ” و ” مجهود ” ، وأنت لا تختار ما تسمعه في المذياع ولا ما تراه في السينما أو التلفاز`);
+        valName(`hello`,                    `اهلاََ بكم ...`);
+        valName(`text-1`,                   `هنا موقع التصميمات الرائعة`);
+        valName(`text-2`,                   `كل الآمكانيات الخاصة`);
+        valName(`text-3`,                   `مشاهدة احدث العروض`);
+        valName(`text-4`,                   `زيادة عدد المشاهدين`);
+        valName(`text-5`,                   `نسبة الرابحين`);
+        valName(`infoChoose`,               `كل الآشياء التي تريدها هنا علي اعلي مستوي من الخدمه .. وزياده عدد المشاهدين والرابحين تصفح الان  ، واشترك معنا`);
         valName(`titleAbout`,               `من نحن`);
         valName(`infoAbout`,                `منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.`);
         valName(`li1`,                      `تصميم المواقع وتصميم الابلكيشن`);
@@ -90,5 +100,6 @@ $(window).on('load', function () {
         valInput(`inMobile`,                `رقم الهاتف`);
         valInput(`inEmail`,                 `البريد الالكتروني`);
         valInput(`inInfo`,                  `الرساله`);
+        // valName(``,                         ``);
     }
 });

@@ -15,10 +15,10 @@
     contain: size style layout;
 }
 
-@mixin absoluteItem($top, $left, $right, $translate){
-    position: absolute;
+@mixin positionItem($position, $top, $left, $right, $translate){
+    position: $position;
     top: $top;
-    transform: translateY($translate);
+    transform: $translate;
     left: $left;
     right: $right;
     margin: auto;
