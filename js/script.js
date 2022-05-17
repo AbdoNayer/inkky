@@ -134,6 +134,33 @@ $(document).ready(function () {
         $('.theme-color').toggleClass('back')
     });
 
-});
+    // Slider Owl
+    $('#sliderOurClient').owlCarousel({
+        loop:true,
+        margin:5,
+        center:true,
+        autoplay:true,
+        autoplayTimeout: 10000,
+        smartSpeed: 1000,
+        animateOut: 'fadeOut',
+        dragEndSpeed: 10000,
+        pagination : false,
+        nav:true,
+        navText: [
+            '<i class="icon-arrow-left"></i>',
+            '<i class="icon-arrow-right"></i>'
+        ],
+        responsive:{
+            0:{
+                items:1
+            },
+            900:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
 
-// Sli
+});
