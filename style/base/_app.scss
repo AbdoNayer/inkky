@@ -402,6 +402,168 @@
     }
 }
 
+// Slider Client
+.slider-client{
+    position: relative;
+    img{
+        width: 100%;
+        height: 500px;
+    }
+    .over{
+        @include positionItem(absolute, 50%, 0, 0, translateY(-50%));
+        background-color: rgba(0,0,0,0.8);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .block-item-welcome{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            direction: rtl;
+            max-width: 550px;
+            padding: 30px;
+            padding-inline-start: 140px;
+            position: relative;
+            &::after{
+                content: "";
+                background-color: #FFF;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                height: 100%;
+                border-radius: 10px;
+                @include positionItem(absolute, 0px, auto, 0px, initial);
+            }
+            .img-si{
+                @include positionItem(absolute, 40px, auto, -70px, initial);
+                z-index: 9;
+                img{
+                    width: 180px;
+                    height: 200px;
+                    border-radius: 10px;
+                }
+            }
+            .info{
+                z-index: 9;
+                h3{
+                    color: #363636;
+                }
+                p{
+                    color: #363636;
+                }
+                .social{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        background: #f1f1f1;
+                        margin: 10px;
+                        border-radius: 5px;
+                        color: var(--mainColor);
+                        overflow: hidden;
+                        position: relative;
+                        i{
+                            font-size: 18px;
+                            transition: 0.2s linear;
+                        }
+                        &:hover i{
+                            transform: scale(1.1);
+                            color: #f1f1f1;
+                        }
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            width: 120%;
+                            height: 120%;
+                            background: var(--mainColor);
+                            transform: rotate(45deg);
+                            left: -110%;
+                            top: 90%;
+                        }
+                        &:hover::before{
+                            animation: socialMedia 0.7s 1;
+                            top: -10%;
+                            left: -10%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .owl-item.active{
+        .block-item-welcome{
+            &::after{
+                animation-name: translateBox;
+                animation-fill-mode: both;
+                animation-duration: 1s;
+                animation-delay: 1s;
+            }
+            .img-si{
+                animation-name: translateBoxImg;
+                animation-fill-mode: both;
+                animation-duration: 2s;
+                animation-delay: 2s;
+            }
+            .info{
+                h3, p , .social {
+                    animation-name: translateBoxInfo;
+                    animation-fill-mode: both;
+                }
+                h3{
+                    animation-duration: 2.5s;
+                    animation-delay: 2.5s;
+                }
+                p{
+                    animation-duration: 3s;
+                    animation-delay: 3s;
+                }
+                .social{
+                    animation-duration: 3.5s;
+                    animation-delay: 3.5s;
+                }
+            }
+        }
+    }
+    @keyframes translateBox {
+        from {
+          opacity: 0;
+          visibility: hidden;
+          width: 0%;
+        }
+        to {
+          opacity: 1;
+          visibility: initial;
+          width: 100%;
+        }
+    }
+    @keyframes translateBoxImg {
+        from {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          visibility: initial;
+          transform: translateX(0px);
+        }
+    }
+    @keyframes translateBoxInfo {
+        from {
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(50px);
+        }
+        to {
+          opacity: 1;
+          visibility: initial;
+          transform: translateY(0px);
+        }
+    }
+}
+
 // Section Projects
 .projects-section{
     .tab-filter{
@@ -510,6 +672,7 @@
         }
     }
 }
+
 @keyframes translateInfo {
     from {
       opacity: 0;
@@ -521,7 +684,7 @@
       visibility: initial;
       transform: translateY(0px);
     }
-  }
+}
 
 // Section Contact 
 .contact-section{
@@ -561,7 +724,6 @@
 }
 
 // Slider Owl
-
 .slider-welcome{
     max-width: 1300px;
     margin: auto;
