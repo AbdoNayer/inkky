@@ -134,34 +134,4 @@ $(document).ready(function () {
         $('.theme-color').toggleClass('back')
     });
 
-
-    // Slider Owl
-    $('#sliderClient').owlCarousel({
-        loop:true,
-        margin:5,
-        center:true,
-        autoplay:false,
-        autoplayTimeout: 5000,
-        smartSpeed: 1000,
-        animateOut: 'fadeOut',
-        dragEndSpeed: 5000,
-        pagination : false,
-        nav:true,
-        navText: [
-            '<i class="icon-arrow-left"></i>',
-            '<i class="icon-arrow-right"></i>'
-        ],
-        responsive:{
-            0:{
-                items:1
-            },
-            900:{
-                items:3
-            },
-            1000:{
-                items:5
-            }
-        }
-    });
-
 });
