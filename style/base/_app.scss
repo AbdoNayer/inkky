@@ -85,6 +85,27 @@
     }
 }
 
+// Tilte Head
+.title-head{
+    position: relative;
+    &::after {
+        content: "X";
+        @include positionItem(absolute, 50px, 0, 0, initial);
+        font-size: 20px;
+        background-color: #FFF;
+        width: 35px;
+        height: 35px;
+        border-radius: 50px;
+    }
+    &::before {
+        content: "";
+        @include positionItem(absolute, 58px, 0, 0, initial);
+        background-color: var(--mainColor);
+        width: 140px;
+        height: 2px;
+    }
+}
+
 // Text Animation
 .dynamic-title {
     width: auto;
@@ -170,7 +191,7 @@
         background-color: var(--mainColor);
         @include transition(0.5s);
         .head-header{
-            #logo{
+            .logo{
                 color: transparent;
                 -webkit-text-stroke: 2px var(--white);
                 position: relative;
@@ -461,7 +482,7 @@
             color: #FFF;
             text-align: center;
             padding: 10px 50px;
-            h1, p, button{
+            h1, p, a{
                 position: relative;
                 z-index: 9;
                 opacity: 0;
@@ -476,7 +497,7 @@
                 animation-duration: 0.6s;
                 animation-delay: 0.6s;
             }
-            button{
+            a{
                 animation-duration: 0.7s;
                 animation-delay: 0.7s;
             }
@@ -499,7 +520,7 @@
         }
         &:hover{
             .info-project{
-                h1, p, button{
+                h1, p, a{
                     animation-name: translateInfo;
                     animation-fill-mode: both;
                 }
@@ -519,20 +540,6 @@
         opacity: 1;
         visibility: initial;
         transform: translateY(0px);
-        }
-    }
-}
-
-// Section Contact 
-.contact-section{
-    .form-section{
-        .over-contact{
-            z-index: 9;
-        }
-    }
-    .img-contact{
-        img{
-            max-width: 610px;
         }
     }
 }
@@ -661,8 +668,8 @@
             .img-si{
                 animation-name: translateBoxImg;
                 animation-fill-mode: both;
-                animation-duration: 2s;
-                animation-delay: 2s;
+                animation-duration: 1.5s;
+                animation-delay: 1.5s;
             }
             .info{
                 h3, p , .social {
@@ -670,16 +677,16 @@
                     animation-fill-mode: both;
                 }
                 h3{
-                    animation-duration: 2.5s;
-                    animation-delay: 2.5s;
+                    animation-duration: 1.7s;
+                    animation-delay: 1.7s;
                 }
                 p{
-                    animation-duration: 3s;
-                    animation-delay: 3s;
+                    animation-duration: 1.9s;
+                    animation-delay: 1.9s;
                 }
                 .social{
-                    animation-duration: 3.5s;
-                    animation-delay: 3.5s;
+                    animation-duration: 2s;
+                    animation-delay: 2s;
                 }
             }
         }
@@ -718,6 +725,22 @@
           opacity: 1;
           visibility: initial;
           transform: translateY(0px);
+        }
+    }
+}
+
+// Section Contact 
+.contact-section{
+    .form-section{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 10px;
+        .over-contact{
+            z-index: 9;
+        }
+    }
+    .img-contact{
+        img{
+            max-width: 610px;
         }
     }
 }
@@ -831,9 +854,6 @@ footer {
         }
     }
 }
-
-
-// Lay
 
 
   

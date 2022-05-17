@@ -85,23 +85,37 @@ button{
 }
 
 .btn-default{
-  background: var(--mainColor) !important;
-  color: var(--white) !important;
   border: 1px solid var(--mainColor) !important;
-  &:hover{
-    background-color: var(--white) !important;
-    color: var(--mainColor) !important;
+  &::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    @include transition(0.5s);
+    @include positionItem(absolute, 0, 0, auto, initial);
+    background-color: var(--mainColor);
   }
-}
-
-.btn-white{
-  background: var(--white) !important;
-  color: var(--mainColor) !important;
-  border: 1px solid var(--white) !important;
-  &:hover{
-    background-color: var(--mainColor) !important;
+  &::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    @include transition(0.5s);
+    @include positionItem(absolute, 0, auto, 0, initial);
+    background-color: var(--mainColor);
+  }
+  span{
     color: var(--white) !important;
-    border: 1px solid var(--mainColor) !important;
+    position: relative;
+    z-index: 9;
+    @include transition(0.5s);
+  }
+  &:hover{
+    background-color: var(--white);
+    &::after ,&::before{
+      height: 0;
+    }
+    span{
+      color: var(--mainColor) !important;
+    }
   }
 }
 

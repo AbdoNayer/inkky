@@ -90,26 +90,65 @@ button {
 }
 
 .btn-default {
-  background: var(--mainColor) !important;
-  color: var(--white) !important;
   border: 1px solid var(--mainColor) !important;
+}
+
+.btn-default::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  -webkit-transform: initial;
+          transform: initial;
+  left: 0;
+  right: auto;
+  margin: auto;
+  background-color: var(--mainColor);
+}
+
+.btn-default::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  -webkit-transform: initial;
+          transform: initial;
+  left: auto;
+  right: 0;
+  margin: auto;
+  background-color: var(--mainColor);
+}
+
+.btn-default span {
+  color: var(--white) !important;
+  position: relative;
+  z-index: 9;
+  transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 .btn-default:hover {
-  background-color: var(--white) !important;
-  color: var(--mainColor) !important;
+  background-color: var(--white);
 }
 
-.btn-white {
-  background: var(--white) !important;
-  color: var(--mainColor) !important;
-  border: 1px solid var(--white) !important;
+.btn-default:hover::after, .btn-default:hover::before {
+  height: 0;
 }
 
-.btn-white:hover {
-  background-color: var(--mainColor) !important;
-  color: var(--white) !important;
-  border: 1px solid var(--mainColor) !important;
+.btn-default:hover span {
+  color: var(--mainColor) !important;
 }
 
 .color-default {
@@ -462,6 +501,40 @@ input:focus, textarea:focus {
   z-index: 9;
 }
 
+.title-head {
+  position: relative;
+}
+
+.title-head::after {
+  content: "X";
+  position: absolute;
+  top: 50px;
+  -webkit-transform: initial;
+          transform: initial;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 20px;
+  background-color: #FFF;
+  width: 35px;
+  height: 35px;
+  border-radius: 50px;
+}
+
+.title-head::before {
+  content: "";
+  position: absolute;
+  top: 58px;
+  -webkit-transform: initial;
+          transform: initial;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: var(--mainColor);
+  width: 140px;
+  height: 2px;
+}
+
 .dynamic-title {
   width: auto;
 }
@@ -572,14 +645,14 @@ input:focus, textarea:focus {
   -webkit-transition: all 0.5s ease-in-out;
 }
 
-.section-head .header .head-header #logo {
+.section-head .header .head-header .logo {
   color: transparent;
   -webkit-text-stroke: 2px var(--white);
   position: relative;
   font-family: system-ui;
 }
 
-.section-head .header .head-header #logo:before {
+.section-head .header .head-header .logo:before {
   content: "Sh3wiZo";
   text-align: center;
   color: var(--mainColor);
@@ -1020,7 +1093,7 @@ input:focus, textarea:focus {
   padding: 10px 50px;
 }
 
-.projects-section .box-project .info-project h1, .projects-section .box-project .info-project p, .projects-section .box-project .info-project button {
+.projects-section .box-project .info-project h1, .projects-section .box-project .info-project p, .projects-section .box-project .info-project a {
   position: relative;
   z-index: 9;
   opacity: 0;
@@ -1043,7 +1116,7 @@ input:focus, textarea:focus {
           animation-delay: 0.6s;
 }
 
-.projects-section .box-project .info-project button {
+.projects-section .box-project .info-project a {
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
   -webkit-animation-delay: 0.7s;
@@ -1086,7 +1159,7 @@ input:focus, textarea:focus {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.projects-section .box-project:hover .info-project h1, .projects-section .box-project:hover .info-project p, .projects-section .box-project:hover .info-project button {
+.projects-section .box-project:hover .info-project h1, .projects-section .box-project:hover .info-project p, .projects-section .box-project:hover .info-project a {
   -webkit-animation-name: translateInfo;
           animation-name: translateInfo;
   -webkit-animation-fill-mode: both;
@@ -1126,14 +1199,6 @@ input:focus, textarea:focus {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-}
-
-.contact-section .form-section .over-contact {
-  z-index: 9;
-}
-
-.contact-section .img-contact img {
-  max-width: 610px;
 }
 
 .section-slider {
@@ -1328,10 +1393,10 @@ input:focus, textarea:focus {
           animation-name: translateBoxImg;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .slider-client .owl-item.active .block-item-welcome .info h3, .slider-client .owl-item.active .block-item-welcome .info p, .slider-client .owl-item.active .block-item-welcome .info .social {
@@ -1342,24 +1407,24 @@ input:focus, textarea:focus {
 }
 
 .slider-client .owl-item.active .block-item-welcome .info h3 {
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
-  -webkit-animation-delay: 2.5s;
-          animation-delay: 2.5s;
+  -webkit-animation-duration: 1.7s;
+          animation-duration: 1.7s;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
 
 .slider-client .owl-item.active .block-item-welcome .info p {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation-duration: 1.9s;
+          animation-duration: 1.9s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 
 .slider-client .owl-item.active .block-item-welcome .info .social {
-  -webkit-animation-duration: 3.5s;
-          animation-duration: 3.5s;
-  -webkit-animation-delay: 3.5s;
-          animation-delay: 3.5s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 @-webkit-keyframes translateBox {
@@ -1446,6 +1511,20 @@ input:focus, textarea:focus {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+}
+
+.contact-section .form-section {
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+.contact-section .form-section .over-contact {
+  z-index: 9;
+}
+
+.contact-section .img-contact img {
+  max-width: 610px;
 }
 
 footer .footer {
@@ -1834,7 +1913,7 @@ html[dir=ltr] .contact-section .form-section::after {
 }
 
 html[dir=rtl] .marker {
-  left: 438px;
+  left: 475px;
   width: 74px;
 }
 /*# sourceMappingURL=global.css.map */

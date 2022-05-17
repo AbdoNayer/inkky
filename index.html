@@ -24,6 +24,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- CSS Fancybox -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- CSS OwlCarousel 2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
     <!-- CSS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- CSS Font Awesome -->
@@ -63,7 +65,7 @@
             <div class="container">
                 <div class="head-header d-flex align-items-center justify-content-between pt-3 pb-3">
                     <a href="" data-aos="zoom-in" data-aos-offset="0">
-                        <h1 id="logo" class="m-0 color-white"></h1>
+                        <h1 class="logo m-0 color-white"></h1>
                     </a>
                     <div class="click-nav">
                         <div class='handle'></div>
@@ -74,22 +76,22 @@
                         <ul class="d-flex align-items-center position-relative">
                             <i class="marker"></i>
                             <li class="active">
-                                <a href="" data-value="Home" id="nameHome" class="mx-3 color-white position-relative"></a>
+                                <a href="" data-value="Home" class="name-home mx-3 color-white position-relative"></a>
                             </li>
                             <li>
-                                <a href="" data-value="About" id="nameAbout" class="mx-3 color-white position-relative"></a>
+                                <a href="" data-value="About" class="name-about mx-3 color-white position-relative"></a>
                             </li>
                             <li>
-                                <a href="" data-value="Services" id="nameServices" class="mx-3 color-white position-relative"></a>
+                                <a href="" data-value="Services" class="name-services mx-3 color-white position-relative"></a>
                             </li>
                             <li>
-                                <a href="" data-value="Projects" id="projects" class="mx-3 color-white position-relative"></a>
+                                <a href="" data-value="Projects" class="projects mx-3 color-white position-relative"></a>
                             </li>
                             <li>
-                                <a href="" data-value="Testimonials" id="nameTestimonials" class="mx-3 color-white position-relative"></a>
+                                <a href="" data-value="Testimonials" class="name-testimonials mx-3 color-white position-relative"></a>
                             </li>
                             <li>
-                                <a href="" data-value="Contact" id="nameContact" class="mx-3 color-white position-relative"></a>
+                                <a href="" data-value="Contact" class="name-contact mx-3 color-white position-relative"></a>
                             </li>
                         </ul>
                         <button class="btn-lang color-default" value=""></button>
@@ -114,15 +116,15 @@
                         <div class="head-title">
                             <div class="dynamic-title cd-headline clip">
                                 <span class="cd-words-wrapper">
-                                    <b class="is-visible"><span class="gold-title" id="hello">كفالة اليتيم</span></b>
-                                    <b><span class="gold-title" id="text-1"></span></b>
-                                    <b><span class="gold-title" id="text-2"></span></b>
-                                    <b><span class="gold-title" id="text-3"></span></b>
-                                    <b><span class="gold-title" id="text-4"></span></b>
-                                    <b><span class="gold-title" id="text-5"></span></b>
+                                    <b class="is-visible"><span class="gold-title hello">كفالة اليتيم</span></b>
+                                    <b><span class="gold-title text-1"></span></b>
+                                    <b><span class="gold-title text-2"></span></b>
+                                    <b><span class="gold-title text-3"></span></b>
+                                    <b><span class="gold-title text-4"></span></b>
+                                    <b><span class="gold-title text-5"></span></b>
                                 </span>
                             </div>
-                            <p class="color-white" id="infoChoose"></p>
+                            <p class="color-white info-choose"></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12">
@@ -138,39 +140,47 @@
     </div>
 
     <!-- About Section -->
-    <div id="About" class="about-section py-5 d-flex align-items-center justify-content-between">
-        <div class="section-info-about flex-fill">
-            <div class="block-about">
-                <h2 id="titleAbout" class="title-info color-default fw-bold"></h2>
-                <p id="infoAbout"></p>
-                <ul>
-                    <li class="mt-2 mb-2">
-                        <span><i class="fa-solid fa-check"></i></span>
-                        <strong id="li1"></strong>
-                    </li>
-                    <li class="mt-2 mb-2">
-                        <span><i class="fa-solid fa-check"></i></span>
-                        <strong id="li2"></strong>
-                    </li>
-                    <li class="mt-2 mb-2">
-                        <span><i class="fa-solid fa-check"></i></span>
-                        <strong id="li3"></strong>
-                    </li>
-                    <li class="mt-2 mb-2">
-                        <span><i class="fa-solid fa-check"></i></span>
-                        <strong id="li4"></strong>
-                    </li>
-                </ul>
+    <div id="About" class="about-section py-5">
+        <div class="contianer p-0 m-0">
+            <div class="row p-0 m-0 align-items-center">
+                <div class="col-md-6 col-xs-12">
+                    <div class="section-info-about">
+                        <div class="block-about">
+                            <h2 class="title-about title-info color-default fw-bold"></h2>
+                            <p class="info-about"></p>
+                            <ul>
+                                <li class="mt-2 mb-2">
+                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <strong class="li1"></strong>
+                                </li>
+                                <li class="mt-2 mb-2">
+                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <strong class="li2"></strong>
+                                </li>
+                                <li class="mt-2 mb-2">
+                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <strong class="li3"></strong>
+                                </li>
+                                <li class="mt-2 mb-2">
+                                    <span><i class="fa-solid fa-check"></i></span>
+                                    <strong class="li4"></strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xs-12">
+                    <div class="img-about text-center">
+                        <img class="lazy" data-aos="zoom-in" data-aos-offset="100" data-src="./img/g10.gif">
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="img-about flex-fill text-center">
-            <img class="lazy" data-aos="zoom-in" data-aos-offset="100" data-src="./img/g10.gif">
         </div>
     </div>
 
     <!-- Start Section Slider -->
-    <div class="section-slider">
-        <h2 id="titleServices" class="color-default fw-bold text-center"></h2>
+    <div id="" class="section-slider">
+        <h2 class="title-services color-default fw-bold text-center title-head"></h2>
         <div class="stage">
             <div class="container-slider">
               <div class="ring">
@@ -194,10 +204,10 @@
         <div class="container">
 
             <ul class="tab-filter d-flex align-items-center justify-content-center mb-5">
-                <li data-filter="all" id="all" class="m"></li>
-                <li data-filter=".web" id="webDes" class="mx-2 d-flex"></li>
-                <li data-filter=".react" id="react" class="mx-2 d-flex"></li>
-                <li data-filter=".apps" id="netive" class="mx-2 d-flex"></li>
+                <li data-filter="all" class="all"></li>
+                <li data-filter=".web" class="webDes mx-2 d-flex"></li>
+                <li data-filter=".reactJs" class="react mx-2 d-flex"></li>
+                <li data-filter=".apps" class="netive mx-2 d-flex"></li>
             </ul>
 
             <div class="row justify-content-center container-item">
@@ -205,19 +215,23 @@
                     <div class="box-project my-3">
                         <img class="lazy" data-src="https://www.uxweb-design.com/wp-content/uploads/2019/10/Web-design-1.jpg">
                         <div class="info-project">
-                            <h1>حراج السعودية</h1>
-                            <p>منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.</p>
-                            <button class="btn-button btn-default">مشاهدة الموقع</button>
+                            <h1 class="title-ser-1"></h1>
+                            <p class="info-ser-1"></p>
+                            <a href="" class="btn-button btn-default">
+                                <span class="show-page"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mix react">
+                <div class="col-md-4 mix reactJs">
                     <div class="box-project my-3">
                         <img class="lazy" data-src="http://rockcontent.com/wp-content/uploads/2020/09/web-design.png">
                         <div class="info-project">
-                            <h1>حراج السعودية</h1>
-                            <p>منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.</p>
-                            <button class="btn-button btn-default">مشاهدة الموقع</button>
+                            <h1 class="title-ser-2"></h1>
+                            <p class="info-ser-2"></p>
+                            <a href="" class="btn-button btn-default">
+                                <span class="show-page"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -225,9 +239,11 @@
                     <div class="box-project my-3">
                         <img class="lazy" data-src="https://img.freepik.com/free-vector/cartoon-web-design-landing-page_52683-70880.jpg?w=2000">
                         <div class="info-project">
-                            <h1>حراج السعودية</h1>
-                            <p>منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.</p>
-                            <button class="btn-button btn-default">مشاهدة الموقع</button>
+                            <h1 class="title-ser-3"></h1>
+                            <p class="info-ser-3"></p>
+                            <a href="" class="btn-button btn-default">
+                                <span class="show-page"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -235,9 +251,11 @@
                     <div class="box-project my-3">
                         <img class="lazy" data-src="https://usabilitygeek.com/wp-content/uploads/2019/02/psychology-web-design-00-lead.jpg">
                         <div class="info-project">
-                            <h1>حراج السعودية</h1>
-                            <p>منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.</p>
-                            <button class="btn-button btn-default">مشاهدة الموقع</button>
+                            <h1 class="title-ser-4"></h1>
+                            <p class="info-ser-4"></p>
+                            <a href="" class="btn-button btn-default">
+                                <span class="show-page"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -245,19 +263,23 @@
                     <div class="box-project my-3">
                         <img class="lazy" data-src="https://img.freepik.com/free-vector/cartoon-web-design-landing-page_52683-70880.jpg?w=2000">
                         <div class="info-project">
-                            <h1>حراج السعودية</h1>
-                            <p>منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.</p>
-                            <button class="btn-button btn-default">مشاهدة الموقع</button>
+                            <h1 class="title-ser-5"></h1>
+                            <p class="info-ser-5"></p>
+                            <a href="" class="btn-button btn-default">
+                                <span class="show-page"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mix react">
+                <div class="col-md-4 mix reactJs">
                     <div class="box-project my-3">
                         <img class="lazy" data-src="http://rockcontent.com/wp-content/uploads/2020/09/web-design.png">
                         <div class="info-project">
-                            <h1>حراج السعودية</h1>
-                            <p>منتجاتنا مصنوعة خصيصًا بالكامل ومصممة بأحدث التقنيات وبنيات السحابة.</p>
-                            <button class="btn-button btn-default">مشاهدة الموقع</button>
+                            <h1 class="title-ser-6"></h1>
+                            <p class="info-ser-6"></p>
+                            <a href="" class="btn-button btn-default">
+                                <span class="show-page"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -267,9 +289,9 @@
     </div>
 
     <!-- Start Section Slider Owl -->
-    <div class="section-slider-owl mt-5 pt-5">
-        <h2 id="titleServices" class="color-default fw-bold text-center"></h2>
-        <div id="sliderOurClient" class="owl-carousel owl-theme slider-client">
+    <div id="" class="section-slider-owl mt-5">
+        <h2 class="title-client color-default fw-bold text-center title-head mb-5"></h2>
+        <div id="sliderOurClient" class="owl-carousel owl-theme slider-client pt-5">
             <div class="item">
                 <img class="lazy" data-src="http://rockcontent.com/wp-content/uploads/2020/09/web-design.png">
                 <div class="over">
@@ -278,8 +300,8 @@
                             <img class="lazy" data-src="http://rockcontent.com/wp-content/uploads/2020/09/web-design.png">
                         </div>
                         <div class="info">
-                            <h3>عبدالوهاب نير</h3>
-                            <p>هذا الموقع جميل للغايه وممتع ويحتوي علي اشكال جميله وحركيه والكود علي اعلي مستوي والسرعه فائقه يمكنك التعامل مع الموقع بكل سهوله ومرونه انه من احسن الاشكال الجميله</p>
+                            <h3 class="name-client"></h3>
+                            <p class="info-page"></p>
                             <div class="social d-flex align-items-center">
                                 <a href="https://www.facebook.com/Sh3wZa.CR7/" target="_blank">
                                     <i class="fab fa-facebook-f"></i>
@@ -306,8 +328,8 @@
                             <img class="lazy" data-src="https://www.uxweb-design.com/wp-content/uploads/2019/10/Web-design-1.jpg">
                         </div>
                         <div class="info">
-                            <h3>عبدالوهاب نير</h3>
-                            <p>هذا الموقع جميل للغايه وممتع ويحتوي علي اشكال جميله وحركيه والكود علي اعلي مستوي والسرعه فائقه يمكنك التعامل مع الموقع بكل سهوله ومرونه انه من احسن الاشكال الجميله</p>
+                            <h3 class="name-client"></h3>
+                            <p class="info-page"></p>
                             <div class="social d-flex align-items-center">
                                 <a href="https://www.facebook.com/Sh3wZa.CR7/" target="_blank">
                                     <i class="fab fa-facebook-f"></i>
@@ -334,8 +356,8 @@
                             <img class="lazy" data-src="https://img.freepik.com/free-vector/cartoon-web-design-landing-page_52683-70880.jpg?w=2000">
                         </div>
                         <div class="info">
-                            <h3>عبدالوهاب نير</h3>
-                            <p>هذا الموقع جميل للغايه وممتع ويحتوي علي اشكال جميله وحركيه والكود علي اعلي مستوي والسرعه فائقه يمكنك التعامل مع الموقع بكل سهوله ومرونه انه من احسن الاشكال الجميله</p>
+                            <h3 class="name-client"></h3>
+                            <p class="info-page"></p>
                             <div class="social d-flex align-items-center">
                                 <a href="https://www.facebook.com/Sh3wZa.CR7/" target="_blank">
                                     <i class="fab fa-facebook-f"></i>
@@ -358,31 +380,33 @@
     </div>
 
     <!-- Section Contact Us -->
-    <div id="Contact" class="contact-section position-relative pt-5">
-        <div class="container mw-100">
+    <div id="Contact" class="contact-section position-relative pt-5 pb-5 mb-5">
+        <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-6 p-0">
-                    <div class="form-section position-relative">
+                <div class="col-md-6">
+                    <div class="form-section position-relative" data-aos="fade-up" data-aos-offset="100">
                         <form action="" class="over-contact p-4">
                             <div class="input-val my-4">
-                                <input type="text" id="inName" placeholder="">
+                                <input type="text" class="in-name" placeholder="">
                             </div>
                             <div class="input-val my-4">
-                                <input type="tel" id="inMobile" placeholder="">
+                                <input type="tel" class="in-mobile" placeholder="">
                             </div>
                             <div class="input-val my-4">
-                                <input type="email" id="inEmail" placeholder="">
+                                <input type="email" class="in-email" placeholder="">
                             </div>
                             <div class="input-val my-4">
-                                <textarea id="inInfo" placeholder=""></textarea>
+                                <textarea class="in-info" placeholder=""></textarea>
                             </div>
                             <div class="text-center">
-                                <button class="btn-button btn-default" id="sentForm"></button>
+                                <button class="btn-button btn-default">
+                                    <span class="sent-form"></span>
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-md-6 p-0">
+                <div class="col-md-6">
                     <div class="img-contact position-relative text-center" data-aos="zoom-in" data-aos-offset="100">
                         <img class="lazy" data-src="./img/g7.gif" alt="">
                     </div>
@@ -564,6 +588,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     <!-- Plugin Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Plugin OwlCarousel 2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
     <!-- Plugin Fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <!-- Plugin Animation Page -->

@@ -74,7 +74,6 @@ $(window).on('load', function () {
 $(document).ready(function () {
 
     // Scroll Fix Header
-
     $(window).scroll(function () {
         if($(this).scrollTop() > 30){
             $('.header').addClass('header-fixed')
@@ -106,7 +105,6 @@ $(document).ready(function () {
     });
 
     // Click Open Nav Mobile
-
     $(document).on("click", ".click-nav",function() {
         $(".handle").toggleClass("closed bgDefault");
         $(".click-nav").toggleClass("m-0");
@@ -140,10 +138,10 @@ $(document).ready(function () {
         margin:5,
         center:true,
         autoplay:true,
-        autoplayTimeout: 10000,
+        autoplayTimeout: 6000,
         smartSpeed: 1000,
         animateOut: 'fadeOut',
-        dragEndSpeed: 10000,
+        dragEndSpeed: 6000,
         pagination : false,
         nav:true,
         navText: [
