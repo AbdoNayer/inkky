@@ -260,7 +260,6 @@
             }
         }
         &.header-fixed{
-            position: fixed;
             background: linear-gradient(0deg, var(--mainColor), var(--mainColor)) !important;
             animation: slideDown 0.7s;
         }

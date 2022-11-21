@@ -50,14 +50,10 @@ $(window).on('load', function () {
         $( "html" ).attr("dir", "rtl");
         document.getElementsByClassName("btn-lang").value =  'en';
         $(".btn-lang").text('EN');
-    }else if(lang === 'en'){
+    }else {
         $( "html" ).attr("dir", "ltr");
         document.getElementsByClassName("btn-lang").value =  'ar';
         $(".btn-lang").text('AR')
-    }else {
-        $( "html" ).attr("dir", "rtl");
-        document.getElementsByClassName("btn-lang").value =  'en';
-        $(".btn-lang").text('EN');
     }
 
     // Loading Page
